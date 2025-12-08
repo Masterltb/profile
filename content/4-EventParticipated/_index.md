@@ -1,7 +1,7 @@
 ---
 title: "Events Participated"
 weight: 4
-chapter: false
+chapter: true
 pre: " <b> 4. </b> "
 ---
 

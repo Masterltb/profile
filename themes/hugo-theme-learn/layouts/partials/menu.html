@@ -113,9 +113,9 @@ $currentNode.File }}{{ $currentFileUniqueID = .UniqueID }}{{ end }} {{with
 <li
   data-nav-id="{{.RelPermalink}}"
   title="{{.Title}}"
-  class="dd-item 
+  class="dd-item
         {{if .IsAncestor $currentNode }}parent{{end}}
-        {{if eq .File.UniqueID $currentFileUniqueID}}active{{end}}
+        {{with .File}}{{if eq .UniqueID $currentFileUniqueID}}active{{end}}{{end}}
         {{if .Params.alwaysopen}}parent{{end}}
         "
 >
@@ -145,7 +145,7 @@ $currentNode.File }}{{ $currentFileUniqueID = .UniqueID }}{{ end }} {{with
 <li
   data-nav-id="{{.RelPermalink}}"
   title="{{.Title}}"
-  class="dd-item {{if eq .File.UniqueID $currentFileUniqueID}}active{{end}}"
+  class="dd-item {{with .File}}{{if eq .UniqueID $currentFileUniqueID}}active{{end}}{{end}}"
 >
   <a href="{{ .RelPermalink}}">
     {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML
