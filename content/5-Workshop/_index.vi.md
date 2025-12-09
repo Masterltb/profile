@@ -7,8 +7,6 @@ pre: " <b> 5. </b> "
 ---
 
 
-# WORKSHOP
-
 # XÂY DỰNG HỆ THỐNG SMOKING-CESSATION TRÊN AWS TỪ A → Z
 
 Workshop này hướng dẫn triển khai **toàn bộ hệ thống thực tế** bao gồm: Backend (Lambda + API Gateway), Databases (PostgreSQL + MongoDB), Authentication (Cognito), Infrastructure (VPC, EC2, Security), Frontend hosting (S3 + CloudFront), Monitoring (CloudWatch), và Cleanup.
